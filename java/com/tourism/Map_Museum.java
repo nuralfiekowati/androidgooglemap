@@ -27,5 +27,12 @@ public class Map_Museum extends FragmentActivity {
         map.addMarker(new MarkerOptions()
                 .position(new LatLng(52.519467, 13.398745))
                 .title("First Museum"));
+        
+        CameraUpdate center=
+                CameraUpdateFactory.newLatLng(new LatLng(52.519467, 13.398745));
+        CameraUpdate zoom=CameraUpdateFactory.zoomTo(50);
+
+        map.moveCamera(center);
+        map.animateCamera(zoom);
     }
 }
